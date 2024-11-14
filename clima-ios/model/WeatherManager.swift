@@ -4,9 +4,9 @@ protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
     func didGetError(error: Error)
 }
-
+//replaace with your token id
 class WeatherManager {
-    let url = "https://api.openweathermap.org/data/2.5/weather?appid=12e4d1c38921edcd381ab580ea6147b8&units=metric"
+    let url = "https://api.openweathermap.org/data/2.5/weather?appid={your id}&units=metric"
     var delegate: WeatherManagerDelegate?
     
     func fetchData(cityName: String) {
